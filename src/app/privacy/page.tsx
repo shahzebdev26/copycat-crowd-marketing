@@ -77,12 +77,26 @@ export default function PrivacyPage() {
             Copycat Crowd is designed as a family-friendly party game suitable for ages 13 and above. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a>, and we will promptly delete such data.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
-            6. Account Deletion & Data Retention
-          </h2>
-          <p>
-            In accordance with Google Play policies, players have the right to request full deletion of their account and associated data at any time. You may request account deletion by emailing <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a> with your player name or registered email. All associated data will be permanently wiped within 14 business days.
-          </p>
+          <div id="deletion" className="scroll-mt-36 p-6 rounded-2xl bg-amber-50/80 border-2 border-amber-300">
+            <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] pb-2">
+              6. Account Deletion & Data Retention
+            </h2>
+            <p className="mb-3">
+              In accordance with Google Play developer policies, players have the right to request full, permanent deletion of their account and all associated personal data at any time.
+            </p>
+            <div className="bg-white border-2 border-[#1d1340] rounded-xl p-4 space-y-2 text-xs sm:text-sm font-bold text-[#1d1340]">
+              <div className="text-emerald-700 font-black uppercase text-[11px] tracking-wider">
+                How to Request Account & Data Deletion:
+              </div>
+              <ul className="list-disc pl-5 space-y-1 font-medium text-[#4a3f7a]">
+                <li><b>In-Game:</b> Open Copycat Crowd, navigate to the <b>Account</b> tab, and tap the <b>Delete Account</b> button for immediate automated deletion.</li>
+                <li><b>Via Email:</b> Send an email to <a href="mailto:hasanalam.dev@gmail.com?subject=Copycat%20Crowd%20Account%20Deletion%20Request" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a> with the subject line <i>&quot;Account Deletion Request&quot;</i> and include your registered email address or player display name.</li>
+              </ul>
+              <div className="pt-2 border-t border-slate-100 text-slate-600 font-normal text-xs">
+                <b>Data Deleted:</b> Your email address, encrypted password hash, match history, currency balances, and inventory items are permanently wiped within 14 business days. No personal data is retained.
+              </div>
+            </div>
+          </div>
 
           <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
             7. Contact Us
