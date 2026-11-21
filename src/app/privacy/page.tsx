@@ -24,7 +24,7 @@ export default function PrivacyPage() {
 
         <div className="space-y-6 text-[#4a3f7a] text-sm sm:text-base leading-relaxed font-medium">
           <p>
-            Welcome to <b>Copycat Crowd</b> (&quot;the Game&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), developed and operated by <b>Muhammad Hasan Alam</b>. This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal and device data when you play Copycat Crowd on Android or the web.
+            Welcome to <b>Copycat Crowd</b> (&quot;the Game&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), developed and operated by <b>Muhammad Hasan Alam</b>. This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal and device data when you play Copycat Crowd on Android.
           </p>
 
           <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">

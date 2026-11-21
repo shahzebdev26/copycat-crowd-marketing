@@ -72,7 +72,7 @@ export function Features() {
               </div>
 
               <div className="mt-6 pt-4 border-t-2 border-[#1d1340]/10 flex items-center gap-2 text-xs font-bold text-[#1d1340]">
-                <span>✓ Active on Android & Web</span>
+                <span>✓ Available on Google Play for Android</span>
               </div>
             </div>
           ))}
