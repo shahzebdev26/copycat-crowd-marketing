@@ -1,3 +1,5 @@
+import { Sparkles } from "lucide-react";
+
 export function MovePacks() {
   const packs = [
     {
@@ -5,7 +7,7 @@ export function MovePacks() {
       title: "Classic Move Pack",
       badge: "FREE · 6 MOVES",
       badgeColor: "bg-sky-100 text-sky-800 border-sky-300",
-      moves: ["⬆️ Jump", "🔄 Spin", "⬇️ Crouch", "👋 Wave", "⬅️ Lean Left", "➡️ Lean Right"],
+      moves: ["Jump", "Spin", "Crouch", "Wave", "Lean Left", "Lean Right"],
       desc: "The standard tournament move set. Clean, balanced, and perfect for quick rounds with any crowd.",
     },
     {
@@ -13,7 +15,7 @@ export function MovePacks() {
       title: "Martial Arts Pack",
       badge: "ACTION · 3 MOVES",
       badgeColor: "bg-rose-100 text-rose-800 border-rose-300",
-      moves: ["🦵 High Kick", "🥊 Heavy Punch", "🛡️ Shield Guard Block"],
+      moves: ["High Kick", "Heavy Punch", "Shield Guard Block"],
       desc: "Fast, striking actions that keep opponents guessing. Ideal for high-stakes 1v1 showdowns.",
     },
     {
@@ -21,7 +23,7 @@ export function MovePacks() {
       title: "Rock Paper Scissors",
       badge: "TACTICAL · 3 MOVES",
       badgeColor: "bg-purple-100 text-purple-800 border-purple-300",
-      moves: ["✊ Rock (Fist)", "✋ Paper (Palm)", "✌️ Scissors (Cross)"],
+      moves: ["Rock (Fist)", "Paper (Palm)", "Scissors (Cross)"],
       desc: "Fast pattern recognition! Force players to distinguish between lightning-quick hand signs.",
     },
     {
@@ -29,7 +31,7 @@ export function MovePacks() {
       title: "Victory Moves Pack",
       badge: "EXPRESSIVE · 4 MOVES",
       badgeColor: "bg-amber-100 text-amber-800 border-amber-300",
-      moves: ["👉 Disco Point", "🎵 Rhythm Groove", "🎉 Celebrate", "⭐ Victory Pose"],
+      moves: ["Disco Point", "Rhythm Groove", "Celebrate", "Victory Pose"],
       desc: "Add flair to your sequences. Stun the room with clean victory gestures and high-energy poses.",
     },
   ];
@@ -41,13 +43,14 @@ export function MovePacks() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ff5d8f] text-white border-2 border-[#1d1340] text-xs sm:text-sm font-black shadow-[0_2px_0_#1d1340] mb-4">
-            <span>🥋 EXPAND YOUR MOVE SET</span>
+            <Sparkles className="w-4 h-4 text-white" />
+            <span>EXPAND YOUR MOVE SET</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#1d1340] tracking-tight mb-4">
             Custom Move Packs
           </h2>
           <p className="text-[#4a3f7a] text-base sm:text-lg font-medium">
-            They aren&apos;t just random buttons — they&apos;re action moves! VIP room hosts can select custom Move Packs and string together up to 10 moves per round with +50% coin bonuses for everyone.
+            They aren&apos;t random buttons — they&apos;re action moves! VIP room hosts can select custom Move Packs and string together up to 10 moves per round with +50% coin bonuses for everyone.
           </p>
         </div>
 

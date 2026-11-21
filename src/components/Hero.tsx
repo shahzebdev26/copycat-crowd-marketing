@@ -3,15 +3,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, Trophy, Zap, ShieldCheck } from "lucide-react";
+import { Sparkles, Trophy, Zap, ShieldCheck, ShoppingBag, Gem, ArrowUp, RotateCw, ArrowDown, Hand, Swords, Footprints } from "lucide-react";
 
 const MOVES = [
-  { id: "jump", label: "Jump", icon: "⬆️", color: "bg-sky-400 text-white" },
-  { id: "spin", label: "Spin", icon: "🔄", color: "bg-purple-400 text-white" },
-  { id: "crouch", label: "Crouch", icon: "⬇️", color: "bg-amber-400 text-[#1d1340]" },
-  { id: "wave", label: "Wave", icon: "👋", color: "bg-emerald-400 text-white" },
-  { id: "punch", label: "Punch", icon: "🥊", color: "bg-rose-400 text-white" },
-  { id: "kick", label: "Kick", icon: "🦵", color: "bg-teal-400 text-white" },
+  { id: "jump", label: "Jump", icon: <ArrowUp className="w-4 h-4 stroke-[3]" />, color: "bg-sky-400 text-white" },
+  { id: "spin", label: "Spin", icon: <RotateCw className="w-4 h-4 stroke-[3]" />, color: "bg-purple-400 text-white" },
+  { id: "crouch", label: "Crouch", icon: <ArrowDown className="w-4 h-4 stroke-[3]" />, color: "bg-amber-400 text-[#1d1340]" },
+  { id: "wave", label: "Wave", icon: <Hand className="w-4 h-4 stroke-[3]" />, color: "bg-emerald-400 text-white" },
+  { id: "punch", label: "Punch", icon: <Swords className="w-4 h-4 stroke-[3]" />, color: "bg-rose-400 text-white" },
+  { id: "kick", label: "Kick", icon: <Footprints className="w-4 h-4 stroke-[3]" />, color: "bg-teal-400 text-white" },
 ];
 
 export function Hero() {
@@ -36,7 +36,7 @@ export function Hero() {
       {/* Cartoon Hot Air Balloon Floating in Background */}
       <div className="hidden md:flex flex-col items-center absolute top-20 right-1/4 pointer-events-none -z-10 animate-gentle-bounce opacity-85">
         <div className="w-14 h-16 rounded-full bg-gradient-to-b from-[#ff5d8f] via-[#ffc93c] to-[#38bdf8] border-2 border-[#1d1340] shadow-md flex items-center justify-center">
-          <span className="text-xs">🎈</span>
+          <Sparkles className="w-4 h-4 text-white" />
         </div>
         <div className="w-1 h-2 bg-[#1d1340]"></div>
         <div className="w-4 h-3 bg-amber-700 rounded-sm border border-[#1d1340]"></div>
@@ -97,9 +97,10 @@ export function Hero() {
               {/* Explore Market Button */}
               <Link
                 href="/#market"
-                className="game-btn game-btn-teal text-base sm:text-lg px-6 sm:px-8 py-3.5 rounded-2xl"
+                className="game-btn game-btn-teal text-base sm:text-lg px-6 sm:px-8 py-3.5 rounded-2xl flex items-center gap-2"
               >
-                <span>🛒 Community Market</span>
+                <ShoppingBag className="w-5 h-5" />
+                <span>Community Market</span>
               </Link>
             </div>
 
@@ -122,11 +123,11 @@ export function Hero() {
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             
             {/* Floating Game Badges */}
-            <div className="absolute -top-4 -left-2 z-20 game-pill bg-amber-300 text-xs sm:text-sm">
-              <span>⚡</span> 0.8s Move Window
+            <div className="absolute -top-4 -left-2 z-20 game-pill bg-amber-300 text-xs sm:text-sm flex items-center gap-1.5">
+              <Zap className="w-3.5 h-3.5 text-amber-900 fill-amber-600" /> 0.8s Move Window
             </div>
-            <div className="absolute -bottom-3 right-4 z-20 game-pill bg-cyan-200 text-xs sm:text-sm">
-              <span>💎</span> Community Market
+            <div className="absolute -bottom-3 right-4 z-20 game-pill bg-cyan-200 text-xs sm:text-sm flex items-center gap-1.5">
+              <Gem className="w-3.5 h-3.5 text-cyan-900 fill-cyan-500" /> Community Market
             </div>
 
             {/* Main Stage Simulation Box */}
@@ -152,8 +153,8 @@ export function Hero() {
                 
                 {/* Floating Combos & Notification */}
                 <div className="absolute top-4 left-4 z-10 flex flex-col gap-1">
-                  <div className="game-pill bg-[#ffc93c] text-xs font-black py-0.5 px-3 animate-pulse">
-                    🔥 COMBO {combo}x!
+                  <div className="game-pill bg-[#ffc93c] text-xs font-black py-0.5 px-3">
+                    COMBO {combo}x!
                   </div>
                   <div className="text-[11px] font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                     Last Move: <span className="text-amber-200">{lastMove}</span>
@@ -162,7 +163,7 @@ export function Hero() {
 
                 <div className="absolute top-4 right-4 z-10">
                   <div className="game-pill bg-white text-xs font-bold py-0.5 px-2.5">
-                    🪙 +{combo * 25} Coins
+                    +{combo * 25} Coins
                   </div>
                 </div>
 
@@ -182,7 +183,7 @@ export function Hero() {
                     />
                   </div>
 
-                  {/* Stage Podium (Yellow base with pink ring like in screenshots) */}
+                  {/* Stage Podium (Yellow base with pink ring) */}
                   <div className="w-48 sm:w-56 h-10 sm:h-12 bg-amber-400 rounded-full border-[3px] border-[#1d1340] shadow-[0_6px_0_#b45309] relative flex items-center justify-center">
                     <div className="w-40 sm:w-48 h-5 sm:h-6 bg-[#ff5d8f] rounded-full border-2 border-[#1d1340]/60 flex items-center justify-center">
                       <span className="text-[10px] font-black tracking-widest text-white uppercase">
@@ -201,7 +202,7 @@ export function Hero() {
                     Tap to Copy Moves:
                   </span>
                   <span className="text-[11px] font-bold text-[#ff5d8f]">
-                    ⚡ Tap a move below!
+                    Select a move below:
                   </span>
                 </div>
 
@@ -212,7 +213,7 @@ export function Hero() {
                       onClick={() => handleMovePress(m.label)}
                       className={`game-btn ${m.color} p-2 text-xs flex flex-col items-center justify-center rounded-xl border-2 border-[#1d1340] shadow-[0_3px_0_#1d1340] active:translate-y-1 active:shadow-none transition-all`}
                     >
-                      <span className="text-lg leading-none mb-1">{m.icon}</span>
+                      <span className="mb-1">{m.icon}</span>
                       <span className="font-black text-[11px] tracking-tight">{m.label}</span>
                     </button>
                   ))}

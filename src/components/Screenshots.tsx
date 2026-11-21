@@ -78,7 +78,7 @@ export function Screenshots() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-200 border-2 border-[#1d1340] text-xs sm:text-sm font-black text-[#1d1340] shadow-[0_2px_0_#1d1340] mb-4">
-            <span>📸 AUTHENTIC GAMEPLAY</span>
+            <span>AUTHENTIC GAMEPLAY</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#1d1340] tracking-tight mb-4">
             Gameplay Screenshots

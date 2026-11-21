@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Crown, Gem, Coins } from "lucide-react";
 
 export function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,19 +48,19 @@ export function Nav() {
         <div className="flex items-center gap-2 sm:gap-3">
           {/* VIP Badge */}
           <div className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-300 to-amber-400 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] shadow-[0_2px_0_#1d1340]">
-            <span>👑</span>
+            <Crown className="w-3.5 h-3.5 text-amber-900 fill-amber-600" />
             <span>VIP Active</span>
           </div>
 
           {/* Crystals Pill */}
           <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-100 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] shadow-[0_2px_0_#1d1340]">
-            <span>💎</span>
+            <Gem className="w-3.5 h-3.5 text-cyan-700 fill-cyan-400" />
             <span>962,209</span>
           </div>
 
           {/* Coins Pill */}
           <div className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] shadow-[0_2px_0_#1d1340]">
-            <span>🪙</span>
+            <Coins className="w-3.5 h-3.5 text-amber-800 fill-amber-500" />
             <span>1,222,511</span>
           </div>
 
@@ -136,8 +136,12 @@ export function Nav() {
           <div className="pt-3 border-t-2 border-slate-100 flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Currencies:</span>
             <div className="flex gap-2">
-              <span className="game-pill bg-cyan-100 text-xs py-1 px-2.5">💎 962,209</span>
-              <span className="game-pill bg-amber-100 text-xs py-1 px-2.5">🪙 1.2M</span>
+              <span className="game-pill bg-cyan-100 text-xs py-1 px-2.5 flex items-center gap-1">
+                <Gem className="w-3 h-3 text-cyan-700" /> 962,209
+              </span>
+              <span className="game-pill bg-amber-100 text-xs py-1 px-2.5 flex items-center gap-1">
+                <Coins className="w-3 h-3 text-amber-700" /> 1.2M
+              </span>
             </div>
           </div>
         </div>

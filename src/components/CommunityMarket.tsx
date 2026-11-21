@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, ShoppingBag, Tag, History, Check, X } from "lucide-react";
+import { Search, ShoppingBag, Tag, History, Check, X, Gem, Coins, User, Flame, Sparkles, Glasses, Crown, Sun, Star, Feather, Swords, Zap } from "lucide-react";
 
 interface ListingItem {
   id: string;
@@ -11,7 +11,7 @@ interface ListingItem {
   perk: string;
   seller: string;
   price: number;
-  icon: string;
+  icon: React.ReactNode;
 }
 
 const MARKET_ITEMS: ListingItem[] = [
@@ -23,7 +23,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+10% Coins",
     seller: "Player2663",
     price: 100,
-    icon: "😈",
+    icon: <Flame className="w-12 h-12 text-rose-500" />,
   },
   {
     id: "item-2",
@@ -33,7 +33,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+25% Match Coins · Dark Matter",
     seller: "ShadowMaster",
     price: 350,
-    icon: "🌌",
+    icon: <Sparkles className="w-12 h-12 text-purple-600" />,
   },
   {
     id: "item-3",
@@ -43,7 +43,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+5% Match Coins · Neon HUD",
     seller: "NeonRider",
     price: 45,
-    icon: "🥽",
+    icon: <Glasses className="w-12 h-12 text-cyan-500" />,
   },
   {
     id: "item-4",
@@ -53,7 +53,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "2x Match Coins · Royal Prestige",
     seller: "KingCopy",
     price: 500,
-    icon: "👑",
+    icon: <Crown className="w-12 h-12 text-amber-500 fill-amber-400" />,
   },
   {
     id: "item-5",
@@ -63,7 +63,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+15% Match Coins · Solar Flare",
     seller: "SunGod",
     price: 220,
-    icon: "☀️",
+    icon: <Sun className="w-12 h-12 text-amber-500" />,
   },
   {
     id: "item-6",
@@ -73,7 +73,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+25% Match Coins · Stellar Pulse",
     seller: "AstroKid",
     price: 380,
-    icon: "✨",
+    icon: <Star className="w-12 h-12 text-cyan-500 fill-cyan-400" />,
   },
   {
     id: "item-7",
@@ -83,7 +83,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+20% Match Coins · Divine Grace",
     seller: "SkyWalker",
     price: 450,
-    icon: "🪽",
+    icon: <Feather className="w-12 h-12 text-amber-500" />,
   },
   {
     id: "item-8",
@@ -93,7 +93,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "3 Moves: High Kick, Heavy Punch, Shield",
     seller: "DojoMaster",
     price: 180,
-    icon: "🥋",
+    icon: <Swords className="w-12 h-12 text-rose-500" />,
   },
   {
     id: "item-9",
@@ -103,7 +103,7 @@ const MARKET_ITEMS: ListingItem[] = [
     perk: "+15% Match Coins · Electric Surge",
     seller: "VoltRunner",
     price: 260,
-    icon: "⚡",
+    icon: <Zap className="w-12 h-12 text-amber-500 fill-amber-400" />,
   },
 ];
 
@@ -154,7 +154,8 @@ export function CommunityMarket() {
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-200 border-2 border-[#1d1340] text-xs sm:text-sm font-black text-[#1d1340] shadow-[0_2px_0_#1d1340] mb-4">
-            <span>💎 IN-GAME COMMUNITY MARKET</span>
+            <Gem className="w-4 h-4 text-cyan-800" />
+            <span>IN-GAME COMMUNITY MARKET</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#1d1340] tracking-tight mb-4">
             Community Market
@@ -170,7 +171,7 @@ export function CommunityMarket() {
           {/* Market Window Top Header Bar */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b-2 border-[#1d1340]/15 mb-6">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">🏪</span>
+              <ShoppingBag className="w-6 h-6 text-[#1d1340]" />
               <span className="text-xl sm:text-2xl font-black text-[#1d1340]">
                 Marketplace Browse
               </span>
@@ -178,12 +179,12 @@ export function CommunityMarket() {
 
             {/* Live Balances Indicator */}
             <div className="flex items-center gap-3">
-              <div className="game-pill bg-cyan-100 text-xs sm:text-sm">
-                <span>💎</span>
+              <div className="game-pill bg-cyan-100 text-xs sm:text-sm flex items-center gap-1.5">
+                <Gem className="w-3.5 h-3.5 text-cyan-700" />
                 <span>{balance.toLocaleString()} Crystals</span>
               </div>
-              <div className="hidden sm:inline-flex game-pill bg-amber-100 text-xs sm:text-sm">
-                <span>🪙</span>
+              <div className="hidden sm:inline-flex game-pill bg-amber-100 text-xs sm:text-sm flex items-center gap-1.5">
+                <Coins className="w-3.5 h-3.5 text-amber-700" />
                 <span>1,222,511 Coins</span>
               </div>
             </div>
@@ -194,7 +195,7 @@ export function CommunityMarket() {
             {[
               { id: "Browse", icon: <ShoppingBag size={16} /> },
               { id: "Sell", icon: <Tag size={16} /> },
-              { id: "My Listings", icon: <span className="text-sm">🏷️</span> },
+              { id: "My Listings", icon: <Tag size={16} /> },
               { id: "History", icon: <History size={16} /> },
             ].map((tab) => (
               <button
@@ -271,8 +272,8 @@ export function CommunityMarket() {
                 >
                   <div>
                     {/* Item Icon Preview Box */}
-                    <div className="w-full h-28 rounded-xl bg-gradient-to-b from-sky-50 to-slate-100 border border-[#1d1340]/15 flex items-center justify-center text-5xl mb-3 shadow-inner group-hover:scale-105 transition-transform">
-                      <span>{item.icon}</span>
+                    <div className="w-full h-28 rounded-xl bg-gradient-to-b from-sky-50 to-slate-100 border border-[#1d1340]/15 flex items-center justify-center mb-3 shadow-inner group-hover:scale-105 transition-transform">
+                      {item.icon}
                     </div>
 
                     {/* Name & Rarity */}
@@ -287,12 +288,12 @@ export function CommunityMarket() {
 
                     {/* Perk Stat */}
                     <div className="inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-300 text-[11px] font-bold text-emerald-800 mb-3">
-                      ⚡ {item.perk}
+                      Bonus: {item.perk}
                     </div>
 
                     {/* Seller Tag */}
-                    <div className="text-xs font-semibold text-slate-500 mb-4 flex items-center gap-1">
-                      <span>👤</span>
+                    <div className="text-xs font-semibold text-slate-500 mb-4 flex items-center gap-1.5">
+                      <User className="w-3.5 h-3.5 text-slate-400" />
                       <span>{item.seller}</span>
                     </div>
                   </div>
@@ -300,15 +301,16 @@ export function CommunityMarket() {
                   {/* Price & Buy Button */}
                   <div className="pt-3 border-t border-[#1d1340]/10 flex items-center justify-between">
                     <div className="flex items-center gap-1.5 font-black text-base text-[#1d1340]">
-                      <span className="text-cyan-500">💎</span>
+                      <Gem className="w-4 h-4 text-cyan-600 fill-cyan-400" />
                       <span>{item.price}</span>
                     </div>
 
                     <button
                       onClick={() => handleBuy(item)}
-                      className="game-btn game-btn-teal py-1.5 px-4 text-xs rounded-xl shadow-[0_3px_0_#1d1340]"
+                      className="game-btn game-btn-teal py-1.5 px-4 text-xs rounded-xl shadow-[0_3px_0_#1d1340] flex items-center gap-1.5"
                     >
-                      <span>💎 Buy</span>
+                      <Gem className="w-3.5 h-3.5" />
+                      <span>Buy</span>
                     </button>
                   </div>
                 </div>
@@ -335,7 +337,9 @@ export function CommunityMarket() {
                 <X size={18} />
               </button>
 
-              <div className="text-5xl mb-3">{modalItem.icon}</div>
+              <div className="w-16 h-16 rounded-2xl bg-sky-50 border-2 border-[#1d1340] flex items-center justify-center mx-auto mb-3">
+                {modalItem.icon}
+              </div>
               <h3 className="text-2xl font-black text-[#1d1340] mb-1">
                 {modalItem.name}
               </h3>
@@ -358,17 +362,23 @@ export function CommunityMarket() {
               ) : (
                 <>
                   <div className="bg-slate-50 rounded-xl border-2 border-[#1d1340]/20 p-4 mb-6 text-sm font-bold text-[#1d1340] space-y-2">
-                    <div className="flex justify-between">
+                    <div className="flex justify-between items-center">
                       <span className="text-slate-500">Price:</span>
-                      <span className="text-cyan-600">💎 {modalItem.price}</span>
+                      <span className="text-cyan-700 flex items-center gap-1 font-black">
+                        <Gem className="w-3.5 h-3.5 fill-cyan-400" /> {modalItem.price}
+                      </span>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between items-center">
                       <span className="text-slate-500">Your Balance:</span>
-                      <span>💎 {balance.toLocaleString()}</span>
+                      <span className="flex items-center gap-1 font-black">
+                        <Gem className="w-3.5 h-3.5 fill-cyan-400 text-cyan-700" /> {balance.toLocaleString()}
+                      </span>
                     </div>
-                    <div className="pt-2 border-t border-slate-200 flex justify-between text-emerald-700">
+                    <div className="pt-2 border-t border-slate-200 flex justify-between items-center text-emerald-700">
                       <span>After Purchase:</span>
-                      <span>💎 {(balance - modalItem.price).toLocaleString()}</span>
+                      <span className="flex items-center gap-1 font-black">
+                        <Gem className="w-3.5 h-3.5 fill-emerald-400" /> {(balance - modalItem.price).toLocaleString()}
+                      </span>
                     </div>
                   </div>
 

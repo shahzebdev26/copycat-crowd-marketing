@@ -1,3 +1,5 @@
+import { Eye, Zap, Trophy, ShieldCheck } from "lucide-react";
+
 export function HowItWorks() {
   const steps = [
     {
@@ -6,7 +8,7 @@ export function HowItWorks() {
       title: "Watch The Leader",
       desc: "One player takes center stage as the leader and executes an action-packed string of moves — Jumps, Spins, Crouches, Waves, Kicks, and Punches. Keep your eyes locked on the sequence!",
       color: "bg-sky-100 text-sky-800 border-sky-300",
-      icon: "👀",
+      icon: <Eye className="w-8 h-8 text-sky-700" />,
     },
     {
       num: "02",
@@ -14,15 +16,15 @@ export function HowItWorks() {
       title: "Copy In Exact Order",
       desc: "When the countdown ends, the floor opens to everyone! Recall and enter the exact move sequence within the ultra-fast 0.8s reaction window. Miss a single move and you're eliminated from the round.",
       color: "bg-amber-100 text-amber-800 border-amber-300",
-      icon: "⚡",
+      icon: <Zap className="w-8 h-8 text-amber-700 fill-amber-400" />,
     },
     {
       num: "03",
-      tag: "VICTORY & LOOT",
+      tag: "VICTORY & REWARDS",
       title: "Claim The Podium",
       desc: "Outlast up to 6 opponents to claim the #1 Champion Trophy. Earn Mimic Coins and Crystals, unlock rare career auras in the Hall of Fame, and collect awesome cosmetics in the Community Market!",
       color: "bg-emerald-100 text-emerald-800 border-emerald-300",
-      icon: "🏆",
+      icon: <Trophy className="w-8 h-8 text-emerald-700 fill-emerald-400" />,
     },
   ];
 
@@ -33,7 +35,8 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ffc93c] border-2 border-[#1d1340] text-xs sm:text-sm font-black text-[#1d1340] shadow-[0_2px_0_#1d1340] mb-4">
-            <span>🎮 SIMPLE RULES · HIGH TENSION</span>
+            <ShieldCheck className="w-4 h-4 text-[#1d1340]" />
+            <span>SIMPLE RULES · HIGH TENSION</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#1d1340] tracking-tight mb-4">
             How To Play & Win
@@ -52,7 +55,9 @@ export function HowItWorks() {
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-4xl">{s.icon}</span>
+                  <div className="p-3 rounded-2xl bg-white border-2 border-[#1d1340] shadow-[0_2px_0_#1d1340]">
+                    {s.icon}
+                  </div>
                   <span className="font-mono text-3xl font-black text-[#1d1340]/25">
                     {s.num}
                   </span>

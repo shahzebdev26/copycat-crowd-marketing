@@ -4,7 +4,9 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 pt-32 pb-24">
       <div className="game-card bg-white p-8 sm:p-12 max-w-md w-full text-center">
-        <span className="text-6xl mb-4 block">👀</span>
+        <div className="inline-block px-4 py-1.5 rounded-full bg-rose-100 border-2 border-[#1d1340] text-sm font-black text-rose-800 mb-4">
+          404 ERROR
+        </div>
         <h1 className="text-3xl font-black text-[#1d1340] mb-2">
           Page Not Found
         </h1>
