@@ -22,8 +22,8 @@ export function ReflexChallenge() {
   const [score, setScore] = useState(0);
 
   // Generate sequence and play demonstration
-  const startChallenge = (roundStreak = 0) => {
-    const seqLength = 3 + Math.min(2, Math.floor(roundStreak / 2));
+  const startChallenge = (targetLength = 3) => {
+    const seqLength = Math.max(3, Math.min(7, targetLength));
     const newSeq = Array.from({ length: seqLength }, () => {
       const randomMove = AVAILABLE_MOVES[Math.floor(Math.random() * AVAILABLE_MOVES.length)];
       return randomMove.id;
@@ -122,7 +122,7 @@ export function ReflexChallenge() {
                   Ready to test your memory? Hit Start below.
                 </span>
                 <button
-                  onClick={() => startChallenge(0)}
+                  onClick={() => startChallenge(3)}
                   className="game-btn game-btn-yellow py-3 px-8 text-base rounded-2xl shadow-[0_4px_0_#1d1340] flex items-center gap-2"
                 >
                   <Play size={18} className="fill-[#1d1340]" />
@@ -192,10 +192,10 @@ export function ReflexChallenge() {
                   Combo streak increased to {streak}x (+250 Coins)
                 </span>
                 <button
-                  onClick={() => startChallenge(streak)}
+                  onClick={() => startChallenge(Math.min(7, sequence.length + 1))}
                   className="game-btn game-btn-teal py-2.5 px-6 text-sm rounded-xl"
                 >
-                  Next Round ({sequence.length + 1} Moves)
+                  Next Round ({Math.min(7, sequence.length + 1)} Moves)
                 </button>
               </div>
             )}
@@ -209,7 +209,7 @@ export function ReflexChallenge() {
                   The sequence required exact order and timing.
                 </span>
                 <button
-                  onClick={() => startChallenge(0)}
+                  onClick={() => startChallenge(3)}
                   className="game-btn game-btn-white py-2 px-5 text-sm rounded-xl flex items-center gap-2"
                 >
                   <RotateCcw size={16} />

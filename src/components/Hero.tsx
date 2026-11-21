@@ -74,16 +74,16 @@ export function Hero() {
                 href="https://play.google.com/store/apps/details?id=com.hasan.copycatcrowd"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="game-btn game-btn-yellow text-base sm:text-lg px-6 sm:px-8 py-3.5 rounded-2xl group shadow-[0_5px_0_#1d1340]"
+                className="game-btn game-btn-yellow h-[60px] min-h-[60px] text-base sm:text-lg px-6 sm:px-8 rounded-2xl group shadow-[0_5px_0_#1d1340] inline-flex items-center justify-center"
               >
-                <svg className="w-6 h-6 fill-[#1d1340] group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 fill-[#1d1340] group-hover:scale-110 transition-transform shrink-0" viewBox="0 0 24 24">
                   <path d="M3.609 1.814L13.792 12 3.61 22.186a2.038 2.038 0 0 1-.61-.926V2.74c0-.348.21-.664.61-.926zm11.396 11.397L17.5 14.62l-12.756 7.37a1.94 1.94 0 0 1-1.135.197l11.396-11.396zM18.87 13.23l2.846-1.644c.85-.49.85-1.282 0-1.772L18.87 8.17l-2.484 2.485 2.484 2.575zm-3.865-4.043L3.609 1.814a1.94 1.94 0 0 1 1.135.197L17.5 9.38l-2.495 2.407-1.396-1.396z"/>
                 </svg>
-                <div className="text-left">
-                  <span className="block text-[10px] tracking-widest uppercase font-black leading-none text-[#1d1340]/70">
+                <div className="text-left leading-none">
+                  <span className="block text-[10px] tracking-widest uppercase font-black text-[#1d1340]/70 mb-0.5">
                     GET IT ON
                   </span>
-                  <span className="block text-base sm:text-lg font-black leading-tight text-[#1d1340]">
+                  <span className="block text-base sm:text-lg font-black text-[#1d1340]">
                     Google Play
                   </span>
                 </div>
@@ -92,10 +92,10 @@ export function Hero() {
               {/* See How It Works Button */}
               <Link
                 href="/#how-to-play"
-                className="game-btn game-btn-white text-base px-6 py-3.5 rounded-2xl flex items-center gap-2 hover:bg-slate-50"
+                className="game-btn game-btn-white h-[60px] min-h-[60px] text-base sm:text-lg px-6 sm:px-8 rounded-2xl inline-flex items-center justify-center gap-2 hover:bg-slate-50 shadow-[0_5px_0_#1d1340]"
               >
                 <span>How to Play</span>
-                <ArrowRight size={16} />
+                <ArrowRight size={18} className="shrink-0" />
               </Link>
             </div>
 
