@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Copycat Crowd",
-  description: "Terms of Service for Copycat Crowd (com.hasan.copycatcrowd). Rules of fair play, virtual currency, and account conduct.",
+  description: "Terms of Service for Copycat Crowd. Rules of fair play, virtual currency, and account conduct.",
 };
 
 export default function TermsPage() {
@@ -19,7 +19,7 @@ export default function TermsPage() {
         </h1>
         
         <div className="text-xs font-mono font-bold text-slate-500 pb-6 border-b-2 border-slate-100 mb-6">
-          Last Updated: November 21, 2026 · Package: <span className="text-[#ff5d8f]">com.hasan.copycatcrowd</span>
+          Last Updated: November 21, 2026
         </div>
 
         <div className="space-y-6 text-[#4a3f7a] text-sm sm:text-base leading-relaxed font-medium">

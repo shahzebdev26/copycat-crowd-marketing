@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Copycat Crowd",
-  description: "Official Privacy Policy for Copycat Crowd (com.hasan.copycatcrowd). Explains how player data is collected, stored, and protected.",
+  description: "Official Privacy Policy for Copycat Crowd. Explains how player data is collected, stored, and protected.",
 };
 
 export default function PrivacyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         </h1>
         
         <div className="text-xs font-mono font-bold text-slate-500 pb-6 border-b-2 border-slate-100 mb-6">
-          Last Updated: November 21, 2026 · Package: <span className="text-[#ff5d8f]">com.hasan.copycatcrowd</span>
+          Last Updated: November 21, 2026
         </div>
 
         <div className="space-y-6 text-[#4a3f7a] text-sm sm:text-base leading-relaxed font-medium">
@@ -92,7 +92,6 @@ export default function PrivacyPage() {
           </p>
           <div className="bg-slate-50 border-2 border-[#1d1340] rounded-xl p-4 font-bold text-sm text-[#1d1340]">
             <div><b>Developer:</b> Muhammad Hasan Alam</div>
-            <div><b>App Package:</b> com.hasan.copycatcrowd</div>
             <div><b>Email:</b> <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline">hasanalam.dev@gmail.com</a></div>
           </div>
         </div>

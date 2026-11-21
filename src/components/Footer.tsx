@@ -50,7 +50,7 @@ export function Footer() {
         {/* Bottom Notice */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-[#4a3f7a]">
           <p>© {new Date().getFullYear()} Copycat Crowd. All rights reserved.</p>
-          <p>Package: <code className="px-1.5 py-0.5 rounded bg-slate-100 font-mono text-[#1d1340]">com.hasan.copycatcrowd</code></p>
+          <p className="font-bold text-[#1d1340]">Multiplayer Memory Party Game</p>
         </div>
 
       </div>
