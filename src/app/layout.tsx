@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { GameBackground } from "@/components/GameBackground";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://copycatcrowd.com"),
@@ -25,7 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased min-h-screen flex flex-col justify-between">
+      <body className="antialiased min-h-screen flex flex-col justify-between relative">
+        <GameBackground />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
