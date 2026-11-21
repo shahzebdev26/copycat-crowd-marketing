@@ -68,7 +68,7 @@ export default function TermsPage() {
           </p>
           <div className="bg-slate-50 border-2 border-[#1d1340] rounded-xl p-4 font-bold text-sm text-[#1d1340]">
             <div><b>Developer:</b> Muhammad Hasan Alam</div>
-            <div><b>Email:</b> <a href="mailto:hassualoo@gmail.com" className="text-[#ff5d8f] underline">hassualoo@gmail.com</a></div>
+            <div><b>Email:</b> <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline">hasanalam.dev@gmail.com</a></div>
           </div>
         </div>
 

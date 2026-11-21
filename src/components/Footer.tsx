@@ -38,7 +38,7 @@ export function Footer() {
               Terms of Service
             </Link>
             <a
-              href="mailto:hassualoo@gmail.com"
+              href="mailto:hasanalam.dev@gmail.com"
               className="hover:text-[#ff5d8f] transition-colors"
             >
               Developer Support

@@ -74,14 +74,14 @@ export default function PrivacyPage() {
             5. Children&apos;s Privacy (COPPA Compliance)
           </h2>
           <p>
-            Copycat Crowd is designed as a family-friendly party game suitable for ages 13 and above. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:hassualoo@gmail.com" className="text-[#ff5d8f] underline font-bold">hassualoo@gmail.com</a>, and we will promptly delete such data.
+            Copycat Crowd is designed as a family-friendly party game suitable for ages 13 and above. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a>, and we will promptly delete such data.
           </p>
 
           <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
             6. Account Deletion & Data Retention
           </h2>
           <p>
-            In accordance with Google Play policies, players have the right to request full deletion of their account and associated data at any time. You may request account deletion by emailing <a href="mailto:hassualoo@gmail.com" className="text-[#ff5d8f] underline font-bold">hassualoo@gmail.com</a> with your player name or registered email. All associated data will be permanently wiped within 14 business days.
+            In accordance with Google Play policies, players have the right to request full deletion of their account and associated data at any time. You may request account deletion by emailing <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a> with your player name or registered email. All associated data will be permanently wiped within 14 business days.
           </p>
 
           <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
           <div className="bg-slate-50 border-2 border-[#1d1340] rounded-xl p-4 font-bold text-sm text-[#1d1340]">
             <div><b>Developer:</b> Muhammad Hasan Alam</div>
             <div><b>App Package:</b> com.hasan.copycatcrowd</div>
-            <div><b>Email:</b> <a href="mailto:hassualoo@gmail.com" className="text-[#ff5d8f] underline">hassualoo@gmail.com</a></div>
+            <div><b>Email:</b> <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline">hasanalam.dev@gmail.com</a></div>
           </div>
         </div>
 
