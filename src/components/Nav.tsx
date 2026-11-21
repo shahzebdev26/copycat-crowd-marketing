@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, Crown, Gem, Coins } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ export function Nav() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-6 font-bold text-sm text-[#1d1340]">
+        <nav className="hidden lg:flex items-center gap-7 font-bold text-sm text-[#1d1340]">
           <Link href="/#how-to-play" className="hover:text-[#ff5d8f] transition-colors">How to Play</Link>
           <Link href="/#moves" className="hover:text-[#ff5d8f] transition-colors">Moves & Packs</Link>
           <Link href="/#market" className="hover:text-[#ff5d8f] transition-colors">Community Market</Link>
@@ -44,37 +44,19 @@ export function Nav() {
           <Link href="/#faq" className="hover:text-[#ff5d8f] transition-colors">FAQ</Link>
         </nav>
 
-        {/* In-Game Currencies & Google Play CTA */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* VIP Badge */}
-          <div className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-300 to-amber-400 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] shadow-[0_2px_0_#1d1340]">
-            <Crown className="w-3.5 h-3.5 text-amber-900 fill-amber-600" />
-            <span>VIP Active</span>
-          </div>
-
-          {/* Crystals Pill */}
-          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-100 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] shadow-[0_2px_0_#1d1340]">
-            <Gem className="w-3.5 h-3.5 text-cyan-700 fill-cyan-400" />
-            <span>962,209</span>
-          </div>
-
-          {/* Coins Pill */}
-          <div className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] shadow-[0_2px_0_#1d1340]">
-            <Coins className="w-3.5 h-3.5 text-amber-800 fill-amber-500" />
-            <span>1,222,511</span>
-          </div>
-
+        {/* Google Play CTA & Mobile Toggle */}
+        <div className="flex items-center gap-3">
           {/* Google Play Download Button */}
           <a
             href="https://play.google.com/store/apps/details?id=com.hasan.copycatcrowd"
             target="_blank"
             rel="noopener noreferrer"
-            className="game-btn game-btn-yellow py-2 px-3 sm:px-5 text-xs sm:text-sm rounded-full"
+            className="game-btn game-btn-yellow py-2 px-4 sm:px-5 text-xs sm:text-sm rounded-full"
           >
             <svg className="w-4 h-4 fill-[#1d1340]" viewBox="0 0 24 24">
               <path d="M3.609 1.814L13.792 12 3.61 22.186a2.038 2.038 0 0 1-.61-.926V2.74c0-.348.21-.664.61-.926zm11.396 11.397L17.5 14.62l-12.756 7.37a1.94 1.94 0 0 1-1.135.197l11.396-11.396zM18.87 13.23l2.846-1.644c.85-.49.85-1.282 0-1.772L18.87 8.17l-2.484 2.485 2.484 2.575zm-3.865-4.043L3.609 1.814a1.94 1.94 0 0 1 1.135.197L17.5 9.38l-2.495 2.407-1.396-1.396z"/>
             </svg>
-            <span className="hidden xs:inline">Play Store</span>
+            <span>Play Store</span>
           </a>
 
           {/* Mobile Menu Toggle Button */}
@@ -133,17 +115,6 @@ export function Nav() {
           >
             FAQ
           </Link>
-          <div className="pt-3 border-t-2 border-slate-100 flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-500">Currencies:</span>
-            <div className="flex gap-2">
-              <span className="game-pill bg-cyan-100 text-xs py-1 px-2.5 flex items-center gap-1">
-                <Gem className="w-3 h-3 text-cyan-700" /> 962,209
-              </span>
-              <span className="game-pill bg-amber-100 text-xs py-1 px-2.5 flex items-center gap-1">
-                <Coins className="w-3 h-3 text-amber-700" /> 1.2M
-              </span>
-            </div>
-          </div>
         </div>
       )}
     </header>
