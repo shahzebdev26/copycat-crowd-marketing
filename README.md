@@ -15,7 +15,7 @@ Built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **
 - **Community Market Showcase**: Categorized cosmetic showroom for rare toppers, particle auras, charms, and titles.
 - **Authentic Gameplay Screenshots**: High-resolution in-game screenshots with full-screen lightbox zoom modal and keyboard navigation.
 - **Mobile Responsive**: Fully responsive layout tested across viewports down to narrow mobile screens.
-- **Player Support & Legal Compliance**: Direct access to Privacy Policy (`/privacy`) and Terms of Service (`/terms`) with developer support at `hasanalam.dev@gmail.com`.
+- **Player Support & Legal Compliance**: Direct access to Privacy Policy (`/privacy`) and Terms of Service (`/terms`) with developer support at `techsparks.co@gmail.com`.
 
 ---
 
@@ -51,4 +51,4 @@ npm start
 - **Game Title**: Copycat Crowd: Memory Party Battle
 - **Platform**: Android Mobile Exclusive
 - **Package Name**: `com.hasan.copycatcrowd`
-- **Developer Contact**: `hasanalam.dev@gmail.com`
+- **Developer Contact**: `techsparks.co@gmail.com`

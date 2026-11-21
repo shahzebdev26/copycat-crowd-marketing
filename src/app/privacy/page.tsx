@@ -74,7 +74,7 @@ export default function PrivacyPage() {
             5. Children&apos;s Privacy (COPPA Compliance)
           </h2>
           <p>
-            Copycat Crowd is designed as a family-friendly party game suitable for ages 13 and above. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a>, and we will promptly delete such data.
+            Copycat Crowd is designed as a family-friendly party game suitable for ages 13 and above. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:techsparks.co@gmail.com" className="text-[#ff5d8f] underline font-bold">techsparks.co@gmail.com</a>, and we will promptly delete such data.
           </p>
 
           <div id="deletion" className="scroll-mt-36 p-6 rounded-2xl bg-amber-50/80 border-2 border-amber-300">
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
               </div>
               <ul className="list-disc pl-5 space-y-1 font-medium text-[#4a3f7a]">
                 <li><b>In-Game:</b> Open Copycat Crowd, navigate to the <b>Account</b> tab, and tap the <b>Delete Account</b> button for immediate automated deletion.</li>
-                <li><b>Via Email:</b> Send an email to <a href="mailto:hasanalam.dev@gmail.com?subject=Copycat%20Crowd%20Account%20Deletion%20Request" className="text-[#ff5d8f] underline font-bold">hasanalam.dev@gmail.com</a> with the subject line <i>&quot;Account Deletion Request&quot;</i> and include your registered email address or player display name.</li>
+                <li><b>Via Email:</b> Send an email to <a href="mailto:techsparks.co@gmail.com?subject=Copycat%20Crowd%20Account%20Deletion%20Request" className="text-[#ff5d8f] underline font-bold">techsparks.co@gmail.com</a> with the subject line <i>&quot;Account Deletion Request&quot;</i> and include your registered email address or player display name.</li>
               </ul>
               <div className="pt-2 border-t border-slate-100 text-slate-600 font-normal text-xs">
                 <b>Data Deleted:</b> Your email address, encrypted password hash, match history, currency balances, and inventory items are permanently wiped within 14 business days. No personal data is retained.
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
           </p>
           <div className="bg-slate-50 border-2 border-[#1d1340] rounded-xl p-4 font-bold text-sm text-[#1d1340]">
             <div><b>Developer:</b> Muhammad Hasan Alam</div>
-            <div><b>Email:</b> <a href="mailto:hasanalam.dev@gmail.com" className="text-[#ff5d8f] underline">hasanalam.dev@gmail.com</a></div>
+            <div><b>Email:</b> <a href="mailto:techsparks.co@gmail.com" className="text-[#ff5d8f] underline">techsparks.co@gmail.com</a></div>
           </div>
         </div>
 
