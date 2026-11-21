@@ -1,4 +1,7 @@
 import { Hero } from "@/components/Hero";
+import { LiveTicker } from "@/components/LiveTicker";
+import { ReflexChallenge } from "@/components/ReflexChallenge";
+import { AuraLab } from "@/components/AuraLab";
 import { HowItWorks } from "@/components/HowItWorks";
 import { MovePacks } from "@/components/MovePacks";
 import { CommunityMarket } from "@/components/CommunityMarket";
@@ -11,6 +14,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <LiveTicker />
+      <ReflexChallenge />
+      <AuraLab />
       <HowItWorks />
       <MovePacks />
       <CommunityMarket />

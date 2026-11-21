@@ -37,9 +37,6 @@ body {
   font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--ink);
   background-color: #f0f7ff;
-  background-image: 
-    radial-gradient(ellipse at 50% 0%, #bae6fd 0%, #e0f2fe 45%, #f8fafc 100%);
-  background-attachment: fixed;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -143,7 +140,7 @@ body {
   box-shadow: 0 3px 0 var(--ink);
 }
 
-/* Floating Clouds Animation */
+/* Animations */
 @keyframes float-cloud-left {
   0% { transform: translateX(-10%); }
   50% { transform: translateX(5%); }
@@ -171,6 +168,42 @@ body {
 
 .animate-gentle-bounce {
   animation: bounce-gentle 3s ease-in-out infinite;
+}
+
+@keyframes spin-turntable {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-turntable {
+  animation: spin-turntable 16s linear infinite;
+}
+
+@keyframes aura-expansion {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+  50% { transform: scale(1.15) rotate(180deg); opacity: 0.95; }
+}
+
+.animate-aura-pulse {
+  animation: aura-expansion 4s ease-in-out infinite;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(50vh) rotate(180deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+}
+
+.animate-confetti-1 {
+  animation: confetti-fall 12s linear infinite;
+}
+
+.animate-confetti-2 {
+  animation: confetti-fall 16s linear infinite 4s;
+}
+
+.animate-confetti-3 {
+  animation: confetti-fall 14s linear infinite 8s;
 }
 
 /* Custom scrollbar */
