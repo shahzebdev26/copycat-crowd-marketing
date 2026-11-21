@@ -1,4 +1,4 @@
-import { Users, Coins, Trophy, ShieldCheck } from "lucide-react";
+import { Users, Coins, Trophy, ShieldCheck, Sparkles } from "lucide-react";
 
 export function Features() {
   const features = [
