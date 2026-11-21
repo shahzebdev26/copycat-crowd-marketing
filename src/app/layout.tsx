@@ -5,15 +5,15 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://copycatcrowd.com"),
-  title: "Copycat Crowd - Real-Time Multiplayer Memory Party Game",
-  description: "Dance, copy, and outsmart your friends in Copycat Crowd! Fast-paced 7-player party battles, peer-to-peer community market trading, and rhythmic memory challenges on Android.",
+  title: "Copycat Crowd - Real-Time 7-Player Memory Move Battle",
+  description: "Copy the moves and outsmart the crowd in Copycat Crowd! Fast-paced 7-player party battles, customizable toppers and auras, and exciting memory move challenges on Android.",
   icons: {
     icon: "/images/app-icon.png",
     apple: "/images/app-icon.png",
   },
   openGraph: {
-    title: "Copycat Crowd - Real-Time Multiplayer Memory Party Game",
-    description: "The high-energy party battle where copycats battle for the crown. Real-time 7-player matchmaking, custom move packs, and Community Market trading.",
+    title: "Copycat Crowd - Real-Time 7-Player Memory Move Battle",
+    description: "The high-energy party battle where copycats battle for the crown. Real-time 7-player matchmaking, custom move packs, and Community Market customization.",
     images: [{ url: "/images/feature-graphic.png", width: 1024, height: 500 }],
   },
 };

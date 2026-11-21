@@ -20,7 +20,7 @@ export function HowItWorks() {
       num: "03",
       tag: "VICTORY & LOOT",
       title: "Claim The Podium",
-      desc: "Outlast up to 6 opponents to claim the #1 Champion Trophy. Earn Mimic Coins and Crystals, unlock rare career auras in the Hall of Fame, and trade cosmetic items in the Community Market!",
+      desc: "Outlast up to 6 opponents to claim the #1 Champion Trophy. Earn Mimic Coins and Crystals, unlock rare career auras in the Hall of Fame, and collect awesome cosmetics in the Community Market!",
       color: "bg-emerald-100 text-emerald-800 border-emerald-300",
       icon: "🏆",
     },

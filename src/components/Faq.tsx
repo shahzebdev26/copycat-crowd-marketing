@@ -14,7 +14,7 @@ const FAQS = [
   },
   {
     q: "How does the Community Market work?",
-    a: "The Community Market is a 100% player-driven peer-to-peer exchange. Players can list character skins, toppers, particle auras, charms, titles, and move packs for Crystals. When someone purchases your listing, Crystals are deposited directly into your balance.",
+    a: "The Community Market is an in-game shop where players can find, buy, or list spare cosmetic items like toppers, auras, and move packs using Crystals. It lets you customize your look and pick up cool items from the community.",
   },
   {
     q: "Is Copycat Crowd pay-to-win?",
@@ -50,7 +50,7 @@ export function Faq() {
             Got Questions?
           </h2>
           <p className="text-[#4a3f7a] text-base sm:text-lg font-medium">
-            Everything you need to know about moves, multiplayer rules, and the player trading market.
+            Everything you need to know about moves, multiplayer rules, and customizing your character.
           </p>
         </div>
 

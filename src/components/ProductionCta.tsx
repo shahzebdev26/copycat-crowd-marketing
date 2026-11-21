@@ -33,7 +33,7 @@ export function ProductionCta() {
             </h2>
 
             <p className="text-base sm:text-lg text-[#1d1340] font-bold mb-8 leading-relaxed">
-              Download Copycat Crowd on Google Play and start copying moves, climbing the leaderboards, and trading rare cosmetic auras today!
+              Download Copycat Crowd on Google Play and start copying moves, climbing the leaderboards, and collecting rare cosmetic auras today!
             </p>
 
             {/* Big Google Play Download Button */}

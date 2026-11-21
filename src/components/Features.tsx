@@ -10,9 +10,9 @@ export function Features() {
     },
     {
       icon: <Coins className="w-8 h-8 text-[#f59e0b]" />,
-      title: "Player-Driven Marketplace",
-      tag: "ECONOMY",
-      desc: "Buy, sell, and trade characters, toppers, auras, charms, and move packs using Crystals. Complete fair trade history, transparent seller tags, and zero pay-to-win mechanics.",
+      title: "Community Item Market",
+      tag: "COSMETICS",
+      desc: "Customize your character with awesome toppers, particle auras, charms, and move packs. Pick up community listings or list your spare cosmetics to earn Crystals.",
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-[#22c55e]" />,

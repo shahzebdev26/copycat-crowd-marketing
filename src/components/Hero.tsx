@@ -126,7 +126,7 @@ export function Hero() {
               <span>⚡</span> 0.8s Move Window
             </div>
             <div className="absolute -bottom-3 right-4 z-20 game-pill bg-cyan-200 text-xs sm:text-sm">
-              <span>💎</span> P2P Market Active
+              <span>💎</span> Community Market
             </div>
 
             {/* Main Stage Simulation Box */}

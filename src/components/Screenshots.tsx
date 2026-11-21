@@ -22,8 +22,8 @@ const SCREENSHOTS = [
   },
   {
     src: "/images/screenshot-4.jpg",
-    title: "Peer-to-Peer Community Market",
-    desc: "Browse live player listings with clean item cards and price tags.",
+    title: "Community Market Showcase",
+    desc: "Browse community listings for cool toppers, charms, and auras.",
   },
   {
     src: "/images/screenshot-5.jpg",
@@ -66,7 +66,7 @@ export function Screenshots() {
             Gameplay Screenshots
           </h2>
           <p className="text-[#4a3f7a] text-base sm:text-lg font-medium">
-            Take a look inside Copycat Crowd: vibrant 3D arenas, custom auras, market trading, and tense memory showdowns.
+            Take a look inside Copycat Crowd: vibrant 3D arenas, custom auras, community item market, and fast memory showdowns.
           </p>
         </div>
 

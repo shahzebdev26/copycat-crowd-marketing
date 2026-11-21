@@ -116,7 +116,7 @@ const RARITY_COLORS: Record<string, { bg: string; text: string; border: string }
 };
 
 export function CommunityMarket() {
-  const [activeTab, setActiveTab] = useState<"Browse" | "Sell" | "My Listings" | "Trade History">("Browse");
+  const [activeTab, setActiveTab] = useState<"Browse" | "Sell" | "My Listings" | "History">("Browse");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedRarity, setSelectedRarity] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -154,13 +154,13 @@ export function CommunityMarket() {
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-200 border-2 border-[#1d1340] text-xs sm:text-sm font-black text-[#1d1340] shadow-[0_2px_0_#1d1340] mb-4">
-            <span>💎 100% PLAYER-DRIVEN ECONOMY</span>
+            <span>💎 IN-GAME COMMUNITY MARKET</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-[#1d1340] tracking-tight mb-4">
             Community Market
           </h2>
           <p className="text-[#4a3f7a] text-base sm:text-lg font-medium">
-            Trade cosmetic items, toppers, auras, and move packs directly with players worldwide. No locked paywalls — list what you unlock, earn Crystals, and customize your look!
+            Collect and customize with awesome toppers, particle auras, charms, and move packs! Browse community items or list your extra cosmetics to earn Crystals.
           </p>
         </div>
 
@@ -189,13 +189,13 @@ export function CommunityMarket() {
             </div>
           </div>
 
-          {/* Mode Tabs (Browse / Sell / My Listings / Trade History) */}
+          {/* Mode Tabs (Browse / Sell / My Listings / History) */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
             {[
               { id: "Browse", icon: <ShoppingBag size={16} /> },
               { id: "Sell", icon: <Tag size={16} /> },
               { id: "My Listings", icon: <span className="text-sm">🏷️</span> },
-              { id: "Trade History", icon: <History size={16} /> },
+              { id: "History", icon: <History size={16} /> },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -340,7 +340,7 @@ export function CommunityMarket() {
                 {modalItem.name}
               </h3>
               <p className="text-xs font-bold text-slate-500 mb-6">
-                Trade with {modalItem.seller}
+                Sold by {modalItem.seller}
               </p>
 
               {purchaseSuccess ? (
