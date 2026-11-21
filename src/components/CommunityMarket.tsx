@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, ShoppingBag, Tag, History, Check, X, Gem, Coins, User, Flame, Sparkles, Glasses, Crown, Sun, Star, Feather, Swords, Zap } from "lucide-react";
+import { Search, ShoppingBag, Tag, History, Gem, User, Flame, Sparkles, Glasses, Crown, Sun, Star, Feather, Swords, Zap } from "lucide-react";
 
 interface ListingItem {
   id: string;
@@ -120,9 +120,6 @@ export function CommunityMarket() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedRarity, setSelectedRarity] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [balance, setBalance] = useState(962209);
-  const [modalItem, setModalItem] = useState<ListingItem | null>(null);
-  const [purchaseSuccess, setPurchaseSuccess] = useState(false);
 
   // Filter listings
   const filteredItems = MARKET_ITEMS.filter((item) => {
@@ -131,21 +128,6 @@ export function CommunityMarket() {
     const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCat && matchesRarity && matchesSearch;
   });
-
-  const handleBuy = (item: ListingItem) => {
-    setModalItem(item);
-    setPurchaseSuccess(false);
-  };
-
-  const confirmPurchase = () => {
-    if (!modalItem) return;
-    setBalance((prev) => Math.max(0, prev - modalItem.price));
-    setPurchaseSuccess(true);
-    setTimeout(() => {
-      setModalItem(null);
-      setPurchaseSuccess(false);
-    }, 1500);
-  };
 
   return (
     <section id="market" className="py-20 relative bg-gradient-to-b from-white via-sky-50 to-white border-y-[3px] border-[#1d1340]">
@@ -161,7 +143,7 @@ export function CommunityMarket() {
             Community Market
           </h2>
           <p className="text-[#4a3f7a] text-base sm:text-lg font-medium">
-            Collect and customize with awesome toppers, particle auras, charms, and move packs! Browse community items or list your extra cosmetics to earn Crystals.
+            Collect and customize with awesome toppers, particle auras, charms, and move packs! All items are browsed, collected, and equipped directly inside the game.
           </p>
         </div>
 
@@ -173,20 +155,13 @@ export function CommunityMarket() {
             <div className="flex items-center gap-3">
               <ShoppingBag className="w-6 h-6 text-[#1d1340]" />
               <span className="text-xl sm:text-2xl font-black text-[#1d1340]">
-                Marketplace Browse
+                Marketplace Showcase
               </span>
             </div>
 
-            {/* Live Balances Indicator */}
-            <div className="flex items-center gap-3">
-              <div className="game-pill bg-cyan-100 text-xs sm:text-sm flex items-center gap-1.5">
-                <Gem className="w-3.5 h-3.5 text-cyan-700" />
-                <span>{balance.toLocaleString()} Crystals</span>
-              </div>
-              <div className="hidden sm:inline-flex game-pill bg-amber-100 text-xs sm:text-sm flex items-center gap-1.5">
-                <Coins className="w-3.5 h-3.5 text-amber-700" />
-                <span>1,222,511 Coins</span>
-              </div>
+            {/* In-Game Notice Pill */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-[#1d1340]/20 text-xs font-bold text-[#4a3f7a]">
+              <span>In-game cosmetic showroom</span>
             </div>
           </div>
 
@@ -298,20 +273,16 @@ export function CommunityMarket() {
                     </div>
                   </div>
 
-                  {/* Price & Buy Button */}
+                  {/* Price & In-Game Availability Tag */}
                   <div className="pt-3 border-t border-[#1d1340]/10 flex items-center justify-between">
                     <div className="flex items-center gap-1.5 font-black text-base text-[#1d1340]">
                       <Gem className="w-4 h-4 text-cyan-600 fill-cyan-400" />
-                      <span>{item.price}</span>
+                      <span>{item.price} Crystals</span>
                     </div>
 
-                    <button
-                      onClick={() => handleBuy(item)}
-                      className="game-btn game-btn-teal py-1.5 px-4 text-xs rounded-xl shadow-[0_3px_0_#1d1340] flex items-center gap-1.5"
-                    >
-                      <Gem className="w-3.5 h-3.5" />
-                      <span>Buy</span>
-                    </button>
+                    <span className="game-pill bg-slate-100 border-slate-300 text-[11px] font-bold text-[#4a3f7a]">
+                      In-Game Item
+                    </span>
                   </div>
                 </div>
               );
@@ -325,82 +296,6 @@ export function CommunityMarket() {
           )}
 
         </div>
-
-        {/* Purchase Confirmation Modal (In-Game Style) */}
-        {modalItem && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-            <div className="game-card bg-white p-6 sm:p-8 max-w-sm w-full text-center relative">
-              <button
-                onClick={() => setModalItem(null)}
-                className="absolute top-4 right-4 p-1 rounded-full border-2 border-[#1d1340] hover:bg-slate-100"
-              >
-                <X size={18} />
-              </button>
-
-              <div className="w-16 h-16 rounded-2xl bg-sky-50 border-2 border-[#1d1340] flex items-center justify-center mx-auto mb-3">
-                {modalItem.icon}
-              </div>
-              <h3 className="text-2xl font-black text-[#1d1340] mb-1">
-                {modalItem.name}
-              </h3>
-              <p className="text-xs font-bold text-slate-500 mb-6">
-                Sold by {modalItem.seller}
-              </p>
-
-              {purchaseSuccess ? (
-                <div className="py-6">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 border-2 border-emerald-500 flex items-center justify-center mx-auto mb-3">
-                    <Check size={24} strokeWidth={3} />
-                  </div>
-                  <div className="font-black text-lg text-emerald-700">
-                    Purchase Complete!
-                  </div>
-                  <div className="text-xs text-slate-500 mt-1">
-                    Added to your inventory.
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <div className="bg-slate-50 rounded-xl border-2 border-[#1d1340]/20 p-4 mb-6 text-sm font-bold text-[#1d1340] space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-slate-500">Price:</span>
-                      <span className="text-cyan-700 flex items-center gap-1 font-black">
-                        <Gem className="w-3.5 h-3.5 fill-cyan-400" /> {modalItem.price}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-slate-500">Your Balance:</span>
-                      <span className="flex items-center gap-1 font-black">
-                        <Gem className="w-3.5 h-3.5 fill-cyan-400 text-cyan-700" /> {balance.toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="pt-2 border-t border-slate-200 flex justify-between items-center text-emerald-700">
-                      <span>After Purchase:</span>
-                      <span className="flex items-center gap-1 font-black">
-                        <Gem className="w-3.5 h-3.5 fill-emerald-400" /> {(balance - modalItem.price).toLocaleString()}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <button
-                      onClick={() => setModalItem(null)}
-                      className="game-btn game-btn-white py-2 text-sm rounded-xl"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      onClick={confirmPurchase}
-                      className="game-btn game-btn-yellow py-2 text-sm rounded-xl shadow-[0_4px_0_#1d1340]"
-                    >
-                      Confirm Buy
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        )}
 
       </div>
     </section>
