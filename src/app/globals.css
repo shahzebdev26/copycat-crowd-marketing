@@ -1,77 +1,188 @@
 @import "tailwindcss";
+@import "@fontsource/fredoka/400.css";
+@import "@fontsource/fredoka/500.css";
+@import "@fontsource/fredoka/600.css";
+@import "@fontsource/fredoka/700.css";
 
-@layer base {
-  :root {
-    --bg-dark: #070913;
-    --bg-card: #0f1325;
-    --bg-card-hover: #161c36;
-    --border: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(56, 189, 248, 0.35);
-    --cyan: #38bdf8;
-    --cyan-glow: rgba(56, 189, 248, 0.25);
-    --purple: #a855f7;
-    --gold: #fbbf24;
-    --green: #22c55e;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-  }
+/* =========================================================
+   Copycat Crowd: Signature Cartoon Game Theme
+   Chunky ink outlines, sunny sky gradients, creamy paper cards,
+   and 3D tactile press-down buttons.
+   ========================================================= */
 
-  body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-    background-image: 
-      radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.16), transparent 45%),
-      radial-gradient(circle at 10% 30%, rgba(168, 85, 247, 0.12), transparent 40%),
-      radial-gradient(circle at 90% 65%, rgba(56, 189, 248, 0.1), transparent 40%);
-    background-repeat: no-repeat;
-  }
+:root {
+  --ink: #1d1340;
+  --ink-soft: #4a3f7a;
+  --paper: #fffaf0;
+  --paper-card: #ffffff;
+  --sky-1: #1b75d0;
+  --sky-2: #38bdf8;
+  --sky-3: #7de2d1;
+  --sky-warm: #fff3d6;
+  --yellow: #ffc93c;
+  --yellow-hover: #ffd255;
+  --pink: #ff5d8f;
+  --pink-hover: #ff759f;
+  --teal: #22c7b5;
+  --teal-hover: #35d8c6;
+  --green: #22c55e;
+  --purple: #8b5cf6;
+  --cyan-gem: #06b6d4;
+  --gold-coin: #f59e0b;
+  --radius-card: 24px;
+  --radius-btn: 18px;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+body {
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink);
+  background-color: #f0f7ff;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, #bae6fd 0%, #e0f2fe 45%, #f8fafc 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-.text-gradient-purple {
-  background: linear-gradient(135deg, #ffffff 20%, #a855f7 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Chunky Game Text Stroke */
+.game-stroke {
+  -webkit-text-stroke: 4px var(--ink);
+  paint-order: stroke fill;
 }
 
-.device-frame {
-  position: relative;
-  background: #000;
-  border: 10px solid #1c223a;
-  border-radius: 34px;
-  box-shadow: 
-    0 25px 60px -15px rgba(0, 0, 0, 0.8),
-    0 0 40px rgba(56, 189, 248, 0.2),
-    inset 0 0 10px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+.game-stroke-lg {
+  -webkit-text-stroke: 8px var(--ink);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 6px 0 var(--ink));
 }
 
-.floating-chip {
-  position: absolute;
-  background: rgba(15, 19, 37, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  padding: 8px 16px;
-  border-radius: 99px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
+.game-stroke-sm {
+  -webkit-text-stroke: 2.5px var(--ink);
+  paint-order: stroke fill;
+}
+
+/* Chunky Game Card */
+.game-card {
+  background-color: #ffffff;
+  border: 3.5px solid var(--ink);
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0 var(--ink);
+}
+
+.game-card-flat {
+  background-color: #ffffff;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+/* Chunky Buttons */
+.game-btn {
+  font-family: 'Fredoka', sans-serif;
   font-weight: 700;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-  z-index: 15;
-  animation: float 4s ease-in-out infinite alternate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-btn);
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--ink);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
 }
 
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-8px); }
+.game-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 0 var(--ink);
+}
+
+.game-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.game-btn-yellow {
+  background: linear-gradient(180deg, #ffc93c 0%, #f59e0b 100%);
+  color: var(--ink);
+}
+
+.game-btn-teal {
+  background: linear-gradient(180deg, #22c7b5 0%, #0d9488 100%);
+  color: #ffffff;
+}
+
+.game-btn-pink {
+  background: linear-gradient(180deg, #ff5d8f 0%, #db2777 100%);
+  color: #ffffff;
+}
+
+.game-btn-white {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+/* Game Pills */
+.game-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 2.5px solid var(--ink);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  box-shadow: 0 3px 0 var(--ink);
+}
+
+/* Floating Clouds Animation */
+@keyframes float-cloud-left {
+  0% { transform: translateX(-10%); }
+  50% { transform: translateX(5%); }
+  100% { transform: translateX(-10%); }
+}
+
+@keyframes float-cloud-right {
+  0% { transform: translateX(10%); }
+  50% { transform: translateX(-5%); }
+  100% { transform: translateX(10%); }
+}
+
+.cloud-float-1 {
+  animation: float-cloud-left 25s ease-in-out infinite;
+}
+
+.cloud-float-2 {
+  animation: float-cloud-right 30s ease-in-out infinite;
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-gentle-bounce {
+  animation: bounce-gentle 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+}
+::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
 }

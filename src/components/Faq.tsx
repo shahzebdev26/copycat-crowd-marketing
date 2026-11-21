@@ -3,72 +3,90 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-export function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+const FAQS = [
+  {
+    q: "How do moves work in Copycat Crowd?",
+    a: "Each round, one player is chosen as the leader and performs an action sequence of moves (e.g. Jump, Spin, Crouch, Wave, Punch, Kick). Once the sequence is complete, all other players must repeat the exact moves in order within a 0.8-second reflex window. Miss one move, and you are eliminated from that round!",
+  },
+  {
+    q: "What are Move Packs and how do they work?",
+    a: "Move Packs expand the types of moves available during matches. The Classic Pack includes 6 standard moves (Jump, Spin, Crouch, Wave, Lean Left & Right). VIP room hosts can select alternative packs like Martial Arts (High Kick, Heavy Punch, Shield Guard) or Rock-Paper-Scissors to test faster pattern recognition with +50% coin bonuses for all players.",
+  },
+  {
+    q: "How does the Community Market work?",
+    a: "The Community Market is a 100% player-driven peer-to-peer exchange. Players can list character skins, toppers, particle auras, charms, titles, and move packs for Crystals. When someone purchases your listing, Crystals are deposited directly into your balance.",
+  },
+  {
+    q: "Is Copycat Crowd pay-to-win?",
+    a: "No! All items in Copycat Crowd are purely cosmetic (auras, toppers, skins, titles) or grant coin bonuses. Match victories depend entirely on your memory recall speed, reflex timing, and focus.",
+  },
+  {
+    q: "What happens if an opponent disconnects in a 1v1 match?",
+    a: "Copycat Crowd features fair-play sudden death logic: if only two players remain and your opponent disconnects or leaves the game, you are immediately awarded the victory, victory rewards, and Hall of Fame win credits.",
+  },
+  {
+    q: "Do I need to create an account to play?",
+    a: "No! Copycat Crowd supports instant guest play. Your stats, unlocked items, and coin balance are automatically saved to your device. You can optionally link Google Sign-In at any time to sync progress across multiple devices.",
+  },
+];
 
-  const faqs = [
-    {
-      q: "Is Copycat Crowd free to play?",
-      a: "Yes! Copycat Crowd is completely free to download and play. All gameplay modes, private and public multiplayer rooms, and weekly tournaments are 100% accessible to every player. Optional cosmetic items, move packs, and VIP passes are available for players who wish to customize their avatar.",
-    },
-    {
-      q: "How does the Community Marketplace work?",
-      a: "Just like CS:GO or Standoff 2, players can list unneeded or duplicate cosmetic items (toppers, auras, skins) for sale in the Community Market for in-game Diamonds. Other players can purchase them directly, and your diamond balance is credited automatically.",
-    },
-    {
-      q: "Can I play with my friends in a private room?",
-      a: "Yes! When you tap 'Create Room', you can select Private and share the unique 4-letter room code with your friends. Up to 7 players can join a room across Android and web browsers.",
-    },
-    {
-      q: "What happens if an opponent leaves mid-match?",
-      a: "If all opponents forfeit or disconnect from an active match, the sole remaining player is immediately awarded a Forfeit Victory! You will receive your match coins, win bonuses, and credit towards your weekly leaderboard rank.",
-    },
-    {
-      q: "What devices and Android versions are supported?",
-      a: "Copycat Crowd is optimized for Android phones and tablets running Android 7.0 (API level 24) and higher, as well as modern WebGL-compatible desktop and mobile browsers.",
-    },
-  ];
+export function Faq() {
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
+
+  const toggle = (idx: number) => {
+    setOpenIdx(openIdx === idx ? null : idx);
+  };
 
   return (
-    <section id="faq" className="py-24 relative border-t border-white/5">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-400 text-xs font-semibold mb-4">
-            Got Questions?
+    <section id="faq" className="py-20 relative bg-white/70 border-t-[3px] border-[#1d1340]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-100 border-2 border-[#1d1340] text-xs sm:text-sm font-black text-[#1d1340] shadow-[0_2px_0_#1d1340] mb-4">
+            <span>❓ FREQUENTLY ASKED QUESTIONS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-            Frequently Asked Questions
+          <h2 className="text-3xl sm:text-5xl font-black text-[#1d1340] tracking-tight mb-4">
+            Got Questions?
           </h2>
-          <p className="text-slate-400 text-base">
-            Everything you need to know about Copycat Crowd, gameplay rules, and Google Play testing.
+          <p className="text-[#4a3f7a] text-base sm:text-lg font-medium">
+            Everything you need to know about moves, multiplayer rules, and the player trading market.
           </p>
         </div>
 
+        {/* FAQ Accordion List */}
         <div className="space-y-4">
-          {faqs.map((f, idx) => {
-            const isOpen = openIndex === idx;
+          {FAQS.map((faq, idx) => {
+            const isOpen = openIdx === idx;
             return (
               <div
-                key={idx}
-                className="bg-[#0f1325] border border-white/8 hover:border-white/15 rounded-2xl overflow-hidden transition-all"
+                key={faq.q}
+                className="game-card p-5 sm:p-6 transition-all cursor-pointer bg-white"
+                onClick={() => toggle(idx)}
               >
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-white text-base sm:text-lg cursor-pointer"
-                >
-                  <span>{f.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-400 flex-none transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 text-slate-300 text-sm sm:text-base leading-relaxed border-t border-white/5 pt-4">
-                    {f.a}
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="font-black text-base sm:text-lg text-[#1d1340]">
+                    {faq.q}
+                  </h3>
+                  <div
+                    className={`p-1.5 rounded-full border-2 border-[#1d1340] transition-transform ${
+                      isOpen ? "rotate-180 bg-[#ffc93c]" : "bg-slate-100"
+                    }`}
+                  >
+                    <ChevronDown size={18} />
                   </div>
+                </div>
+
+                {isOpen && (
+                  <p className="mt-4 pt-4 border-t-2 border-[#1d1340]/10 text-sm sm:text-base text-[#4a3f7a] font-medium leading-relaxed">
+                    {faq.a}
+                  </p>
                 )}
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

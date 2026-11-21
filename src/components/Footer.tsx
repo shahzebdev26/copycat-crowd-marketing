@@ -3,58 +3,56 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#060810] text-slate-400 text-sm py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-          <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+    <footer className="bg-white border-t-[3.5px] border-[#1d1340] pt-12 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b-2 border-[#1d1340]/10">
+          
+          {/* Logo & Info */}
+          <div className="flex items-center gap-3">
+            <div className="relative w-10 h-10 rounded-xl overflow-hidden border-2 border-[#1d1340] shadow-[0_2px_0_#1d1340]">
               <Image
                 src="/images/app-icon.png"
                 alt="Copycat Crowd"
-                width={36}
-                height={36}
-                className="rounded-xl shadow"
+                fill
+                className="object-cover"
+                sizes="40px"
               />
-              <span className="font-bold text-lg text-white">Copycat Crowd</span>
+            </div>
+            <div>
+              <span className="font-black text-xl text-[#1d1340]">
+                COPYCAT <span className="text-[#ff5d8f]">CROWD</span>
+              </span>
+              <p className="text-xs font-bold text-[#4a3f7a]">
+                Multiplayer Memory Party Battle · Developed by Muhammad Hasan Alam
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Legal Links */}
+          <div className="flex flex-wrap items-center gap-6 font-bold text-sm text-[#1d1340]">
+            <Link href="/privacy" className="hover:text-[#ff5d8f] transition-colors">
+              Privacy Policy
             </Link>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              The real-time multiplayer rhythm and memory party game where copycats battle for the crown.
-            </p>
+            <Link href="/terms" className="hover:text-[#ff5d8f] transition-colors">
+              Terms of Service
+            </Link>
+            <a
+              href="mailto:hassualoo@gmail.com"
+              className="hover:text-[#ff5d8f] transition-colors"
+            >
+              Developer Support
+            </a>
           </div>
 
-          <div>
-            <h4 className="text-xs uppercase tracking-wider text-white font-bold mb-4">Game</h4>
-            <ul className="space-y-2.5 text-xs">
-              <li><Link href="/#how-to-play" className="hover:text-white transition-colors">How to Play</Link></li>
-              <li><Link href="/#features" className="hover:text-white transition-colors">Features</Link></li>
-              <li><Link href="/#screenshots" className="hover:text-white transition-colors">Screenshots</Link></li>
-              <li><Link href="/#testers" className="hover:text-white transition-colors">14-Day Closed Beta</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs uppercase tracking-wider text-white font-bold mb-4">Legal</h4>
-            <ul className="space-y-2.5 text-xs">
-              <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs uppercase tracking-wider text-white font-bold mb-4">Support & Contact</h4>
-            <ul className="space-y-2.5 text-xs">
-              <li><a href="mailto:hassualoo@gmail.com" className="text-sky-400 hover:underline">hassualoo@gmail.com</a></li>
-              <li className="text-slate-400">Developer: Muhammad Hasan Alam</li>
-              <li className="text-slate-400">Package: com.hasan.copycatcrowd</li>
-              <li className="text-slate-400">Version: 1.0.1 (Build 2)</li>
-            </ul>
-          </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div>&copy; 2026 Copycat Crowd. All rights reserved.</div>
-          <div>Google Play and the Google Play logo are trademarks of Google LLC.</div>
+        {/* Bottom Notice */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-[#4a3f7a]">
+          <p>© {new Date().getFullYear()} Copycat Crowd. All rights reserved.</p>
+          <p>Package: <code className="px-1.5 py-0.5 rounded bg-slate-100 font-mono text-[#1d1340]">com.hasan.copycatcrowd</code></p>
         </div>
+
       </div>
     </footer>
   );

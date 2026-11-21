@@ -2,78 +2,76 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Copycat Crowd",
-  description: "Terms of Service for Copycat Crowd (com.hasan.copycatcrowd). Outlines player rules, fair play guidelines, and virtual item policies.",
+  description: "Terms of Service for Copycat Crowd (com.hasan.copycatcrowd). Rules of fair play, virtual currency, and account conduct.",
 };
 
 export default function TermsPage() {
   return (
-    <div className="pt-32 pb-24 max-w-4xl mx-auto px-6">
-      <div className="bg-[#0f1325] border border-white/10 rounded-3xl p-8 sm:p-14 shadow-2xl">
-        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-2">
+    <div className="pt-28 sm:pt-36 pb-24 max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="game-card bg-white p-6 sm:p-12 shadow-[0_8px_0_#1d1340]">
+        
+        <div className="inline-block px-3 py-1 rounded-full bg-amber-100 border-2 border-[#1d1340] text-xs font-black text-[#1d1340] mb-3">
+          TERMS & PLAYER CONDUCT
+        </div>
+
+        <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-[#1d1340] mb-2">
           Terms of Service
         </h1>
-        <div className="text-sky-400 font-mono text-xs font-semibold mb-8">
-          Last Updated: November 21, 2026 · App Package: com.hasan.copycatcrowd
+        
+        <div className="text-xs font-mono font-bold text-slate-500 pb-6 border-b-2 border-slate-100 mb-6">
+          Last Updated: November 21, 2026 · Package: <span className="text-[#ff5d8f]">com.hasan.copycatcrowd</span>
         </div>
 
-        <div className="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+        <div className="space-y-6 text-[#4a3f7a] text-sm sm:text-base leading-relaxed font-medium">
           <p>
-            These Terms of Service (&quot;Terms&quot;) govern your access to and use of the <b>Copycat Crowd</b> video game (&quot;the Game&quot;), websites, and services provided by <b>Muhammad Hasan Alam</b> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). By downloading, installing, or playing the Game, you agree to be bound by these Terms.
+            By downloading, installing, or accessing <b>Copycat Crowd</b>, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the game.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/10 pb-2 pt-4">
-            1. Account & Eligibility
+          <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
+            1. Fair Play & Conduct
           </h2>
           <p>
-            You must be at least 13 years old (or the legal age of digital consent in your jurisdiction) to play Copycat Crowd. You agree to provide accurate information when registering an account and are responsible for maintaining the confidentiality of your login credentials.
+            Copycat Crowd is a skill- and memory-based multiplayer game. You agree not to use unauthorized third-party software, bots, macros, automation tools, or packet injectors. Any user caught exploiting bugs or interfering with server matchmaking is subject to immediate and permanent account suspension.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/10 pb-2 pt-4">
-            2. Fair Play & Community Guidelines
-          </h2>
-          <p>Copycat Crowd is built on friendly competition and mutual respect. You agree not to:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Use cheats, automation software (bots), hacks, mods, or any unauthorized third-party software that alters game mechanics.</li>
-            <li>Exploit software bugs or glitches for unfair competitive advantage or currency duplication.</li>
-            <li>Harass, abuse, defame, or use offensive, hateful, or discriminatory usernames or room names.</li>
-            <li>Attempt to reverse-engineer, decompile, or extract the source code of the Game.</li>
-          </ul>
-          <p>Violation of these rules may result in temporary suspension or permanent termination of your account without refund.</p>
-
-          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/10 pb-2 pt-4">
-            3. Virtual Items & In-Game Economy
+          <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
+            2. Virtual Currencies & Marketplace
           </h2>
           <p>
-            The Game features virtual currencies (&quot;Mimic Coins&quot;, &quot;Diamonds/Crystals&quot;) and virtual cosmetic items (&quot;Skins&quot;, &quot;Toppers&quot;, &quot;Auras&quot;, &quot;Move Packs&quot;):
+            The game includes virtual currencies (Mimic Coins and Crystals) and virtual cosmetic items (toppers, auras, move packs, titles).
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Virtual currencies and items have no monetary value outside of the Game and cannot be redeemed for real money, goods, or external services.</li>
-            <li><b>Community Market:</b> The in-game Community Market enables peer-to-peer trading of eligible cosmetic items between players exclusively for in-game Diamonds. Real-money trading, external escrow, or black-market trading outside the official client is strictly prohibited.</li>
-            <li>All purchases of virtual items and VIP subscriptions made via Google Play Billing are final and non-refundable, except as required by applicable law or Google Play policies.</li>
+            <li>Virtual items and currencies have no real-world monetary value and cannot be exchanged for real cash.</li>
+            <li>All trades on the Community Market are final once confirmed. Users are responsible for inspecting the item and price before confirming a purchase.</li>
+            <li>We reserve the right to moderate or revoke virtual items obtained through exploits, unauthorized chargebacks, or fraudulent activities.</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/10 pb-2 pt-4">
-            4. Intellectual Property
+          <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
+            3. In-App Purchases & Subscriptions
           </h2>
           <p>
-            All rights, title, and interest in and to the Game—including 3D models, character designs, animations, sound effects, music, visual interfaces, and code—are owned by Muhammad Hasan Alam and protected by copyright and intellectual property laws.
+            Purchases of Crystals and VIP Gold Stage passes are billed through Google Play Billing. All refund requests are governed by Google Play’s standard refund policies. VIP Subscriptions renew automatically unless cancelled via Google Play Subscriptions at least 24 hours prior to the renewal date.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/10 pb-2 pt-4">
-            5. Disclaimer of Warranties & Limitation of Liability
+          <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
+            4. Limitation of Liability
           </h2>
           <p>
-            The Game is provided &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; without warranties of any kind. To the maximum extent permitted by applicable law, Muhammad Hasan Alam shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your access to or use of the Game.
+            Copycat Crowd is provided &quot;as is&quot; without warranties of any kind. We do not guarantee uninterrupted server connectivity or error-free gameplay. In no event will the developer be liable for indirect, incidental, or consequential damages arising from the use of the game.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/10 pb-2 pt-4">
-            6. Contact Information
+          <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] border-b-2 border-slate-100 pb-2 pt-4">
+            5. Contact Information
           </h2>
-          <div className="bg-black/30 border border-white/10 rounded-2xl p-6 text-sm">
+          <p>
+            For support, dispute inquiries, or account questions:
+          </p>
+          <div className="bg-slate-50 border-2 border-[#1d1340] rounded-xl p-4 font-bold text-sm text-[#1d1340]">
             <div><b>Developer:</b> Muhammad Hasan Alam</div>
-            <div><b>Email:</b> <a href="mailto:hassualoo@gmail.com" className="text-sky-400 hover:underline">hassualoo@gmail.com</a></div>
+            <div><b>Email:</b> <a href="mailto:hassualoo@gmail.com" className="text-[#ff5d8f] underline">hassualoo@gmail.com</a></div>
           </div>
         </div>
+
       </div>
     </div>
   );
