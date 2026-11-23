@@ -31,6 +31,9 @@ export function Footer() {
 
           {/* Quick Legal Links */}
           <div className="flex flex-wrap items-center gap-6 font-bold text-sm text-[#1d1340]">
+            <Link href="/codes" className="hover:text-[#ff5d8f] transition-colors flex items-center gap-1 text-[#b45309]">
+              <span>🎁</span> Redeem Codes
+            </Link>
             <Link href="/privacy" className="hover:text-[#ff5d8f] transition-colors">
               Privacy Policy
             </Link>

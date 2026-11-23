@@ -35,13 +35,16 @@ export function Nav() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-7 font-bold text-sm text-[#1d1340]">
+        <nav className="hidden lg:flex items-center gap-6 font-bold text-sm text-[#1d1340]">
           <Link href="/#how-to-play" className="hover:text-[#ff5d8f] transition-colors">How to Play</Link>
           <Link href="/#moves" className="hover:text-[#ff5d8f] transition-colors">Moves & Packs</Link>
           <Link href="/#market" className="hover:text-[#ff5d8f] transition-colors">Community Market</Link>
           <Link href="/#features" className="hover:text-[#ff5d8f] transition-colors">Features</Link>
-          <Link href="/#screenshots" className="hover:text-[#ff5d8f] transition-colors">Screenshots</Link>
           <Link href="/#faq" className="hover:text-[#ff5d8f] transition-colors">FAQ</Link>
+          <Link href="/codes" className="hover:text-[#ff5d8f] transition-colors flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fef3c7] border-2 border-[#1d1340] shadow-[0_2px_0_#1d1340] text-[#1d1340]">
+            <span>🎁</span>
+            <span>Redeem Codes</span>
+          </Link>
         </nav>
 
         {/* Google Play CTA & Mobile Toggle */}
@@ -114,6 +117,14 @@ export function Nav() {
             className="py-2 px-3 rounded-xl hover:bg-sky-50"
           >
             FAQ
+          </Link>
+          <Link
+            href="/codes"
+            onClick={() => setMobileMenuOpen(false)}
+            className="py-2.5 px-3 rounded-xl bg-[#fef3c7] border-2 border-[#1d1340] shadow-[0_3px_0_#1d1340] flex items-center gap-2 font-black text-[#1d1340]"
+          >
+            <span>🎁</span>
+            <span>Redeem Codes & Free Crystals</span>
           </Link>
         </div>
       )}
