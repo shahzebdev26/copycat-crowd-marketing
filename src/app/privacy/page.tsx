@@ -77,23 +77,155 @@ export default function PrivacyPage() {
             Copycat Crowd is designed as a family-friendly party game suitable for ages 13 and above. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:techsparks.co@gmail.com" className="text-[#ff5d8f] underline font-bold">techsparks.co@gmail.com</a>, and we will promptly delete such data.
           </p>
 
-          <div id="deletion" className="scroll-mt-36 p-6 rounded-2xl bg-amber-50/80 border-2 border-amber-300">
-            <h2 className="text-xl sm:text-2xl font-black text-[#1d1340] pb-2">
+          <div id="deletion" className="scroll-mt-36 p-6 sm:p-8 rounded-2xl bg-amber-50/90 border-3 border-amber-400 shadow-[0_6px_0_#d97706]">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-amber-200 border-2 border-amber-600 text-[11px] font-black text-amber-900 tracking-wide uppercase">
+                Google Play Data Safety
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl font-black text-[#1d1340] pb-2">
               6. Account Deletion & Data Retention
             </h2>
-            <p className="mb-3">
-              In accordance with Google Play developer policies, players have the right to request full, permanent deletion of their account and all associated personal data at any time.
+            <p className="mb-4 text-[#4a3f7a]">
+              In accordance with Google Play developer policies and global privacy regulations, all players have the right to request full, permanent deletion of their account and all associated personal data at any time.
             </p>
-            <div className="bg-white border-2 border-[#1d1340] rounded-xl p-4 space-y-2 text-xs sm:text-sm font-bold text-[#1d1340]">
-              <div className="text-emerald-700 font-black uppercase text-[11px] tracking-wider">
-                How to Request Account & Data Deletion:
+
+            <div className="space-y-4">
+              <div className="text-emerald-800 font-black uppercase text-xs sm:text-sm tracking-wider flex items-center gap-2">
+                <span>⚡ How to Delete Your Account (Step-by-Step)</span>
               </div>
-              <ul className="list-disc pl-5 space-y-1 font-medium text-[#4a3f7a]">
-                <li><b>In-Game:</b> Open Copycat Crowd, navigate to the <b>Account</b> tab, and tap the <b>Delete Account</b> button for immediate automated deletion.</li>
-                <li><b>Via Email:</b> Send an email to <a href="mailto:techsparks.co@gmail.com?subject=Copycat%20Crowd%20Account%20Deletion%20Request" className="text-[#ff5d8f] underline font-bold">techsparks.co@gmail.com</a> with the subject line <i>&quot;Account Deletion Request&quot;</i> and include your registered email address or player display name.</li>
-              </ul>
-              <div className="pt-2 border-t border-slate-100 text-slate-600 font-normal text-xs">
-                <b>Data Deleted:</b> Your email address, encrypted password hash, match history, currency balances, and inventory items are permanently wiped within 14 business days. No personal data is retained.
+
+              {/* Step 1 & 2 Visual Guide Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Step 1 Card */}
+                <div className="bg-white border-3 border-[#1d1340] rounded-2xl p-4 shadow-[0_4px_0_#1d1340] flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-0.5 rounded-lg bg-yellow-300 border-2 border-[#1d1340] text-xs font-black text-[#1d1340]">
+                        STEP 1
+                      </span>
+                      <span className="text-xs font-bold text-slate-500">In-Game Home Screen</span>
+                    </div>
+                    <h3 className="text-base font-black text-[#1d1340] mb-1">
+                      Tap Your Player Name
+                    </h3>
+                    <p className="text-xs text-[#4a3f7a] mb-3 font-medium">
+                      On the game home screen, tap your <b>Player Name / Profile badge</b> located at the top-left corner.
+                    </p>
+                  </div>
+
+                  {/* High-Res Mockup of Top-Left Profile Button with Arrow */}
+                  <div className="bg-gradient-to-b from-[#60a5fa] to-[#38bdf8] border-2 border-[#1d1340] rounded-xl p-4 relative overflow-hidden flex flex-col items-start gap-2 shadow-inner">
+                    <div className="text-[10px] font-black uppercase tracking-wider text-white/90">
+                      Game Screen (Top-Left)
+                    </div>
+                    <div className="relative inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border-2 border-[#1d1340] shadow-[0_3px_0_#1d1340]">
+                      <span className="w-5 h-5 rounded-full bg-yellow-400 border border-[#1d1340] flex items-center justify-center text-xs font-black">
+                        👤
+                      </span>
+                      <span className="text-xs font-black text-[#1d1340]">Player2663</span>
+                      {/* Pulse Indicator */}
+                      <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
+                      <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-red-500"></span>
+                    </div>
+
+                    {/* Pointing Badge with Arrow */}
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-yellow-400 border-2 border-[#1d1340] shadow-[0_2px_0_#1d1340] mt-1">
+                      <span className="text-sm font-black">⬆</span>
+                      <span className="text-[11px] font-black text-[#1d1340]">CLICK HERE ON YOUR NAME</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 2 Card */}
+                <div className="bg-white border-3 border-[#1d1340] rounded-2xl p-4 shadow-[0_4px_0_#1d1340] flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-0.5 rounded-lg bg-rose-300 border-2 border-[#1d1340] text-xs font-black text-[#1d1340]">
+                        STEP 2
+                      </span>
+                      <span className="text-xs font-bold text-slate-500">Profile / Account Popup</span>
+                    </div>
+                    <h3 className="text-base font-black text-[#1d1340] mb-1">
+                      Click &quot;DELETE ACCOUNT&quot;
+                    </h3>
+                    <p className="text-xs text-[#4a3f7a] mb-3 font-medium">
+                      Inside your account modal, scroll to the bottom and click the red <b>DELETE ACCOUNT</b> button to confirm.
+                    </p>
+                  </div>
+
+                  {/* High-Res Mockup of Account Dialog & Delete Button */}
+                  <div className="bg-slate-100 border-2 border-[#1d1340] rounded-xl p-3 flex flex-col gap-2 shadow-inner">
+                    <div className="flex items-center justify-between border-b border-slate-300 pb-1.5">
+                      <span className="text-xs font-black text-[#1d1340]">Account Settings</span>
+                      <span className="text-xs font-bold text-slate-400">✕</span>
+                    </div>
+                    <div className="text-[11px] font-medium text-slate-500">
+                      Progress saved to: <span className="font-bold text-[#1d1340]">player@email.com</span>
+                    </div>
+                    <div className="pt-1 flex flex-col gap-1.5">
+                      <div className="relative inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-red-500 border-2 border-[#1d1340] text-white font-black text-xs shadow-[0_3px_0_#991b1b] cursor-default">
+                        <span>🗑️</span>
+                        <span>DELETE ACCOUNT</span>
+                      </div>
+                      <div className="inline-flex items-center justify-center gap-1 px-2 py-0.5 rounded-lg bg-amber-300 border border-[#1d1340] text-[10px] font-black text-[#1d1340]">
+                        <span>⬆</span>
+                        <span>CLICK THIS RED BUTTON TO DELETE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3: Uninstalled / Web Email Request Option (Google Play Mandatory) */}
+              <div className="bg-white border-3 border-[#1d1340] rounded-2xl p-4 sm:p-5 shadow-[0_4px_0_#1d1340]">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="px-2 py-0.5 rounded-lg bg-cyan-300 border-2 border-[#1d1340] text-xs font-black text-[#1d1340]">
+                    CAN&apos;T OPEN THE GAME?
+                  </span>
+                  <span className="text-xs font-bold text-slate-500">For uninstalled apps or lost phones</span>
+                </div>
+                <p className="text-xs sm:text-sm text-[#4a3f7a] font-medium mb-3">
+                  If you have already uninstalled Copycat Crowd or cannot access the app, you can request permanent deletion directly by email:
+                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="mailto:techsparks.co@gmail.com?subject=Copycat%20Crowd%20Account%20Deletion%20Request"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#ff5d8f] hover:bg-[#ff4077] border-2 border-[#1d1340] text-white font-black text-xs sm:text-sm shadow-[0_3px_0_#1d1340] transition-transform active:translate-y-0.5"
+                  >
+                    <span>📧</span>
+                    <span>Send Deletion Request Email</span>
+                  </a>
+                  <span className="text-xs font-mono text-slate-600 font-bold">
+                    techsparks.co@gmail.com
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-500 mt-2 font-medium">
+                  Please include your registered email address or player display name in the request.
+                </p>
+              </div>
+
+              {/* Data Wiped Summary */}
+              <div className="bg-white/80 border-2 border-amber-300 rounded-xl p-3.5 text-xs text-[#4a3f7a]">
+                <b className="text-[#1d1340] block mb-1">What data is permanently deleted?</b>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 font-semibold">
+                  <div className="p-1.5 bg-amber-100/60 rounded-lg border border-amber-200">
+                    ✉️ Email &amp; Password hash
+                  </div>
+                  <div className="p-1.5 bg-amber-100/60 rounded-lg border border-amber-200">
+                    💰 Coins &amp; Crystal balances
+                  </div>
+                  <div className="p-1.5 bg-amber-100/60 rounded-lg border border-amber-200">
+                    🎒 Unlocked skins &amp; items
+                  </div>
+                  <div className="p-1.5 bg-amber-100/60 rounded-lg border border-amber-200">
+                    🏆 Match history &amp; leaderboard
+                  </div>
+                </div>
+                <div className="mt-2 pt-2 border-t border-amber-200/60 text-[11px] text-slate-500 font-medium">
+                  All associated data is permanently purged from our servers within 14 business days. No personal data is retained.
+                </div>
               </div>
             </div>
           </div>
